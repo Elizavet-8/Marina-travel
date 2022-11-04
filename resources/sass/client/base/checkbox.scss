@@ -1,0 +1,85 @@
+.dt-check__group {
+  &-title {
+    font-family: $font-family-bold;
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  & .dt-check__label {
+    font-size: 14px;
+    font-family: $font-family-regular;
+  }
+
+  & .dt-check {
+    align-items: center !important;
+    margin-bottom: 6px;
+  }
+
+  & .dt-checkboxes-vertical {
+    & .dt-check {
+      max-width: 130px;
+      width: 130px;
+    }
+  }
+}
+
+.dt-check {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  &__wrapper {
+    display: block;
+    min-height: 1.5rem;
+    margin-bottom: 0.125rem;
+
+    &-inline {
+      display: inline-block;
+    }
+  }
+
+  &__input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(0, 113, 235, 0.071);
+    background: transparent;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    margin-right: 8px;
+
+    &:hover {
+      border: 2px solid $color-blue;
+    }
+
+    .dt-check__input-check {
+      border-radius: 100%;
+      height: 17px;
+      width: 17px;
+    }
+
+    & input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 100%;
+      width: 100%;
+    }
+
+    & input:checked ~ .dt-check__input-check {
+      background: $color-blue;
+      box-shadow: 0 3px 10px 0 rgba(0, 113, 235, 0.30);
+      border: 2px solid white;
+    }
+
+    & input:checked:disabled ~ .dt-check__input-check {
+      background: $color-blue !important;
+      pointer-events: none;
+    }
+  }
+}
+

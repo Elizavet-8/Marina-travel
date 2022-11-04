@@ -1,0 +1,74 @@
+.dt-page-footer {
+  background: url("/img/footer-bg.png") no-repeat;
+
+  & ul.dt-sitemap__links {
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 120px;
+
+    & li:not(:last-child) {
+      padding-right: 55px;
+
+      & a.dt-link {
+        display: inline;
+      }
+    }
+  }
+
+  & .dt-years-payments {
+    padding-bottom: 15px;
+
+    & .dt-payments {
+      & .dt-payments__item {
+        padding-right: 15px;
+
+        & img.dt-payment {
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dt-page-footer {
+    background-size: cover;
+
+    & .dt-sitemap__links {
+      display: block !important;
+
+      & li {
+        padding-right: 0 !important;
+
+        &:not(:last-child) {
+          padding-bottom: 20px;
+        }
+      }
+    }
+
+    & .dt-years-payments {
+      & .row {
+        display: flex;
+
+        & .dt-order-name {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+
+        & .dt-order-payments {
+          order: -1;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+
+        & .dt-order-privacy {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
